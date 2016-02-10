@@ -210,30 +210,12 @@ void PlotPMF(void){
 				}
 			}
 			else{
-				uint16_t i;
-				for(i = x1; i <= x2; i++){
-					uint16_t m = (y1 - y2) / (x2 - x1);
-					uint16_t b = y1/(m * x1);
-					ST7735_DrawPixel(i,(m*i + b),color);
-				}
 			}
 		}
 		else{
 			if(y2 < y1){
-				uint16_t i;
-				for(i = x1; i <= x2; i++){
-					uint16_t m = (y1 - y2) / (x1 - x2);
-					uint16_t b = y1/(m * x1);
-					ST7735_DrawPixel(i,(m*i + b),color);
-				}
 			}
 			else{
-				uint16_t i;
-				for(i = x1; i <= x2; i++){
-					uint16_t m = (y2 - y1) / (x1 - x2);
-					uint16_t b = y1/(m * x1);
-					ST7735_DrawPixel(i,(m*i + b),color);
-				}
 			}
 		}
 	}
