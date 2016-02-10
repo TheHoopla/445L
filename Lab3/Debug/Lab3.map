@@ -1,0 +1,303 @@
+******************************************************************************
+                  TI ARM Linker Unix v5.2.6                    
+******************************************************************************
+>> Linked Wed Feb 10 06:36:36 2016
+
+OUTPUT FILE NAME:   <Lab3.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00002650
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  RAM                   00000000   ffffffff  00003829  ffffc7d6  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    00000000    00002708     
+                  00000000    00002180     main.obj (.text)
+                  00002180    00000180     rtsv4_A_be_tiarm9.lib : memcpy32.obj (.text)
+                  00002300    00000100                           : i_div32.obj (.text)
+                  00002400    000000e0                           : u_div32.obj (.text)
+                  000024e0    0000008c                           : exit.obj (.text)
+                  0000256c    00000088                           : autoinit.obj (.text)
+                  000025f4    0000005c                           : cpy_tbl.obj (.text)
+                  00002650    00000050                           : boot.obj (.text)
+                  000026a0    00000024                           : _lock.obj (.text)
+                  000026c4    00000020                           : args_main.obj (.text)
+                  000026e4    00000014     timer.obj (.text)
+                  000026f8    00000008     rtsv4_A_be_tiarm9.lib : pre_init.obj (.text)
+                  00002700    00000008     switch.obj (.text)
+
+.data      0    00000000    00000000     UNINITIALIZED
+
+.const     0    00002708    000007e9     
+                  00002708    000004fb     main.obj (.const:.string:_Font)
+                  00002c03    00000001     --HOLE-- [fill = 0]
+                  00002c04    00000200     main.obj (.const:.string:_dBfs)
+                  00002e04    00000067     main.obj (.const:.string:_Bcmd)
+                  00002e6b    00000001     --HOLE-- [fill = 0]
+                  00002e6c    0000003b     main.obj (.const:.string:_Rcmd1)
+                  00002ea7    00000001     --HOLE-- [fill = 0]
+                  00002ea8    0000002b     main.obj (.const:.string:_Rcmd3)
+                  00002ed3    00000001     --HOLE-- [fill = 0]
+                  00002ed4    0000001d     main.obj (.const:.string)
+
+.cinit     0    00002ef4    000000cc     
+                  00002ef4    00000090     main.obj (.cinit)
+                  00002f84    00000010     rtsv4_A_be_tiarm9.lib : _lock.obj (.cinit)
+                  00002f94    00000010                           : exit.obj (.cinit)
+                  00002fa4    0000000c                           : boot.obj (.cinit)
+                  00002fb0    0000000c                           : stkdepth_vars.obj (.cinit)
+                  00002fbc    00000004     --HOLE-- [fill = 0]
+
+.bss       0    00002fc0    0000006c     UNINITIALIZED
+                  00002fc0    00000054     main.obj (.bss)
+                  00003014    00000008     rtsv4_A_be_tiarm9.lib : _lock.obj (.bss)
+                  0000301c    00000008                           : exit.obj (.bss)
+                  00003024    00000004                           : boot.obj (.bss)
+                  00003028    00000004                           : stkdepth_vars.obj (.bss)
+
+.pinit     0    00000000    00000000     UNINITIALIZED
+
+.stack     0    0000302c    00000800     UNINITIALIZED
+                  0000302c    00000800     --HOLE--
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                 
+-------   ----                 
+00002fc0  .bss                 
+00000000  .data                
+00000000  .text                
+000024e0  C$$EXIT              
+00002180  C_MEMCPY             
+00002300  I$DIV                
+00002300  I$MOD                
+00002304  I_DIV                
+00002304  I_MOD                
+00002400  U$DIV                
+00002400  U$MOD                
+00002404  U_DIV                
+00002404  U_MOD                
+00000080  _Delay1ms            
+00002fd8  _Message             
+00002fe4  _Messageindex        
+00001e70  _Output_Clear        
+00001ea4  _Output_Color        
+00001e54  _Output_Init         
+00001e84  _Output_Off          
+00001e94  _Output_On           
+00000914  _ST7735_Color565     
+00000984  _ST7735_DrawBitmap   
+00000e8c  _ST7735_DrawChar     
+00000c40  _ST7735_DrawCharS    
+000006a4  _ST7735_DrawFastHLine
+000005c8  _ST7735_DrawFastVLine
+00000550  _ST7735_DrawPixel    
+000010dc  _ST7735_DrawString   
+000007b4  _ST7735_FillRect     
+00000780  _ST7735_FillScreen   
+000003a4  _ST7735_InitB        
+000003d8  _ST7735_InitR        
+0000151c  _ST7735_InvertDisplay
+00001c64  _ST7735_OutChar      
+00001db4  _ST7735_OutString    
+000012bc  _ST7735_OutUDec      
+00001aac  _ST7735_PlotBar      
+00001554  _ST7735_PlotClear    
+00001728  _ST7735_PlotLine     
+00001bc8  _ST7735_PlotNext     
+00001bfc  _ST7735_PlotNextErase
+00001608  _ST7735_PlotPoint    
+00001950  _ST7735_PlotPoints   
+00001b48  _ST7735_PlotdBfs     
+0000125c  _ST7735_SetCursor    
+000013b8  _ST7735_SetRotation  
+00001df0  _ST7735_SetTextColor 
+00000954  _ST7735_SwapColor    
+00002fc8  _StTextColor         
+00002fc0  _StX                 
+00002fc4  _StY                 
+00002ff0  _X                   
+00002fe8  _Ymax                
+00002fec  _Ymin                
+00002ff4  _Yrange              
+0000382c  __STACK_END          
+00000800  __STACK_SIZE         
+0000256c  __TI_auto_init       
+0000301c  ___TI_cleanup_ptr    
+00003020  ___TI_dtors_ptr      
+ffffffff  ___binit__           
+00002fc0  ___bss__             
+ffffffff  ___c_args__          
+00002ef4  ___cinit__           
+00000000  ___data__            
+00000000  ___edata__           
+0000302c  ___end__             
+00002708  ___etext__           
+ffffffff  ___pinit__           
+00000000  ___text__            
+000026c4  __args_main          
+00003014  __lock               
+000026b8  __nop                
+000026ac  __register_lock      
+000026a0  __register_unlock    
+0000302c  __stack              
+000026f8  __system_pre_init    
+00003018  __unlock             
+000024e8  _abort               
+00003010  _alarmBool           
+00003008  _alarmHours          
+0000300c  _alarmMinutes        
+00001fdc  _alarmToggle         
+00002ffc  _buttonPressed       
+00002650  _c_int00             
+000025f4  _copy_in             
+00002c04  _dBfs                
+000024f4  _exit                
+00001e40  _ferror              
+00001e2c  _fgetc               
+000011dc  _fillmessage         
+00001e0c  _fputc               
+00002ff8  _lastj               
+000020c0  _main                
+00003028  _main_func_sp        
+00002700  _pullCurrentButton   
+00002054  _screenManager       
+00001f60  _setAlarm            
+00001ebc  _setTime             
+00003024  _stkchk_called       
+00003000  _timeHours           
+00003004  _timeMinutes         
+000026e4  _timerUpdate         
+ffffffff  binit                
+00002ef4  cinit                
+00000000  edata                
+0000302c  end                  
+00002708  etext                
+ffffffff  pinit                
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                 
+-------   ----                 
+00000000  .data                
+00000000  .text                
+00000000  ___data__            
+00000000  ___edata__           
+00000000  ___text__            
+00000000  edata                
+00000080  _Delay1ms            
+000003a4  _ST7735_InitB        
+000003d8  _ST7735_InitR        
+00000550  _ST7735_DrawPixel    
+000005c8  _ST7735_DrawFastVLine
+000006a4  _ST7735_DrawFastHLine
+00000780  _ST7735_FillScreen   
+000007b4  _ST7735_FillRect     
+00000800  __STACK_SIZE         
+00000914  _ST7735_Color565     
+00000954  _ST7735_SwapColor    
+00000984  _ST7735_DrawBitmap   
+00000c40  _ST7735_DrawCharS    
+00000e8c  _ST7735_DrawChar     
+000010dc  _ST7735_DrawString   
+000011dc  _fillmessage         
+0000125c  _ST7735_SetCursor    
+000012bc  _ST7735_OutUDec      
+000013b8  _ST7735_SetRotation  
+0000151c  _ST7735_InvertDisplay
+00001554  _ST7735_PlotClear    
+00001608  _ST7735_PlotPoint    
+00001728  _ST7735_PlotLine     
+00001950  _ST7735_PlotPoints   
+00001aac  _ST7735_PlotBar      
+00001b48  _ST7735_PlotdBfs     
+00001bc8  _ST7735_PlotNext     
+00001bfc  _ST7735_PlotNextErase
+00001c64  _ST7735_OutChar      
+00001db4  _ST7735_OutString    
+00001df0  _ST7735_SetTextColor 
+00001e0c  _fputc               
+00001e2c  _fgetc               
+00001e40  _ferror              
+00001e54  _Output_Init         
+00001e70  _Output_Clear        
+00001e84  _Output_Off          
+00001e94  _Output_On           
+00001ea4  _Output_Color        
+00001ebc  _setTime             
+00001f60  _setAlarm            
+00001fdc  _alarmToggle         
+00002054  _screenManager       
+000020c0  _main                
+00002180  C_MEMCPY             
+00002300  I$DIV                
+00002300  I$MOD                
+00002304  I_DIV                
+00002304  I_MOD                
+00002400  U$DIV                
+00002400  U$MOD                
+00002404  U_DIV                
+00002404  U_MOD                
+000024e0  C$$EXIT              
+000024e8  _abort               
+000024f4  _exit                
+0000256c  __TI_auto_init       
+000025f4  _copy_in             
+00002650  _c_int00             
+000026a0  __register_unlock    
+000026ac  __register_lock      
+000026b8  __nop                
+000026c4  __args_main          
+000026e4  _timerUpdate         
+000026f8  __system_pre_init    
+00002700  _pullCurrentButton   
+00002708  ___etext__           
+00002708  etext                
+00002c04  _dBfs                
+00002ef4  ___cinit__           
+00002ef4  cinit                
+00002fc0  .bss                 
+00002fc0  _StX                 
+00002fc0  ___bss__             
+00002fc4  _StY                 
+00002fc8  _StTextColor         
+00002fd8  _Message             
+00002fe4  _Messageindex        
+00002fe8  _Ymax                
+00002fec  _Ymin                
+00002ff0  _X                   
+00002ff4  _Yrange              
+00002ff8  _lastj               
+00002ffc  _buttonPressed       
+00003000  _timeHours           
+00003004  _timeMinutes         
+00003008  _alarmHours          
+0000300c  _alarmMinutes        
+00003010  _alarmBool           
+00003014  __lock               
+00003018  __unlock             
+0000301c  ___TI_cleanup_ptr    
+00003020  ___TI_dtors_ptr      
+00003024  _stkchk_called       
+00003028  _main_func_sp        
+0000302c  ___end__             
+0000302c  __stack              
+0000302c  end                  
+0000382c  __STACK_END          
+ffffffff  ___binit__           
+ffffffff  ___c_args__          
+ffffffff  ___pinit__           
+ffffffff  binit                
+ffffffff  pinit                
+
+[110 symbols]

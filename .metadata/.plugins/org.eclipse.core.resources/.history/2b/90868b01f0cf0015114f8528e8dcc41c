@@ -1,0 +1,12 @@
+/*
+ * speaker.c
+ *
+ *  Created on: Feb 10, 2016
+ *      Author: jacobwilliamson
+ */
+
+
+void output(uint32_t output){
+	//output data to correct pin for speaker
+}
+

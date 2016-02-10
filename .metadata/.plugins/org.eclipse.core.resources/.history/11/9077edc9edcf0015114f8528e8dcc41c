@@ -1,0 +1,112 @@
+/*
+ * main.c
+ */
+#include <stdint.h>
+#include <stdio.h>
+#include <limits.h>
+#include <stdlib.h>
+
+//buttonPressed Values
+//-1 = waiting
+//0 = menu
+//1 = scroll
+//2 = select
+//3 = hour increment
+//4 = minute increment
+
+uint32_t buttonPressed = -1;
+uint32_t timeHours = 0;
+uint32_t timeMinutes = 0;
+uint32_t alarmHours = 0;
+uint32_t alarmMinutes = 0;
+uint32_t alarmToggle = 0;
+
+void setTime(void){
+	//update ST7735 for Set_Time_View
+	while(buttonPressed != 0){
+		//delay
+		switch(buttonPressed){
+			case (3): timeHours++; //increment hours
+			          //update ST7735
+					  break;
+			case (4): timeMinutes++; //increment minutes
+			          //update ST7735
+					  break;
+			default:
+		}
+		buttonPressed = -1;
+	}
+}
+
+void setAlarm(void){
+	//update ST7735 for Set_Alarm_View
+	while(buttonPressed != 0){
+		//delay
+		switch(buttonPressed){
+			case (3): alarmHours++; //increment hours
+					  //update ST7735
+					  break;
+			case (4): alarmMinutes++; //increment minutes
+					  //update ST7735
+					  break;
+			default:
+		}
+		buttonPressed = -1;
+	}
+}
+
+void alarmToggle(void){
+	//update ST7735 for Toggle_Alarm_View
+	while(buttonPressed != 0){
+		//delay
+		if(buttonPressed == 2){
+			alarmToggle = !alarmToggle;
+			//update ST7735
+		}
+		buttonPressed = -1;
+	}
+}
+
+void screenManager(uint32_t selection){
+	switch (selection){
+			//delay
+			case (0):
+					//Set Time
+					setTime();
+					break;
+			case (1):
+					//Set Alarm
+					setAlarm();
+					break;
+			case (2):
+					//Toggle Alarm On/Off
+					toggleAlarm();
+					break;
+			default:
+	}
+	buttonPressed = -1;
+}
+
+int main(void) {
+	uint32_t selection = 0;
+	while(1){
+		switch (buttonPressed){
+		//delay
+		case (1):
+				//Scroll Selection Down
+				if(selection >= 2){
+					selection = 0;
+				}
+				else{
+					selection++;
+				}
+				break;
+		case (2):
+				//Selects Current Menu Option
+				screenManager(selection);
+				break;
+		default:
+		}
+		buttonPressed = -1;
+	}
+}

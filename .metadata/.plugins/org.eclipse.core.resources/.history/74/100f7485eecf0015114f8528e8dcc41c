@@ -1,0 +1,30 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../main.c \
+../switch.c 
+
+C_DEPS += \
+./main.pp \
+./switch.pp 
+
+OBJS += \
+./main.obj \
+./switch.obj 
+
+OBJS__QUOTED += \
+"main.obj" \
+"switch.obj" 
+
+C_DEPS__QUOTED += \
+"main.pp" \
+"switch.pp" 
+
+C_SRCS__QUOTED += \
+"../main.c" \
+"../switch.c" 
+
+

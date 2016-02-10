@@ -1,0 +1,7 @@
+#include <stdint.h>
+#include <stdio.h>
+#include <limits.h>
+#include <stdlib.h>
+
+void output(uint32_t output);
+

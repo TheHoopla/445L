@@ -1,0 +1,36 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../src/ADCSWTrigger.c \
+../src/ADCTestMain.c \
+../src/PLL.c 
+
+C_DEPS += \
+./src/ADCSWTrigger.pp \
+./src/ADCTestMain.pp \
+./src/PLL.pp 
+
+OBJS += \
+./src/ADCSWTrigger.obj \
+./src/ADCTestMain.obj \
+./src/PLL.obj 
+
+OBJS__QUOTED += \
+"src/ADCSWTrigger.obj" \
+"src/ADCTestMain.obj" \
+"src/PLL.obj" 
+
+C_DEPS__QUOTED += \
+"src/ADCSWTrigger.pp" \
+"src/ADCTestMain.pp" \
+"src/PLL.pp" 
+
+C_SRCS__QUOTED += \
+"../src/ADCSWTrigger.c" \
+"../src/ADCTestMain.c" \
+"../src/PLL.c" 
+
+
