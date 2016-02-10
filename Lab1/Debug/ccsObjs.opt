@@ -1,0 +1,1 @@
+"./tm4c123gh6pm_startup_ccs.obj" "./src/PLL.obj" "./src/ST7735.obj" "./src/fixed.obj" "./src/main.obj" "../tm4c123gh6pm.cmd" -l"libc.a" 
