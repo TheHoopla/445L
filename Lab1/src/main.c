@@ -23,7 +23,7 @@
 #include "ST7735.h"
 #include "PLL.h"
 #include "fixed.h"
-#include "../inc/tm4c123gh6pm.h"
+#include "../../inc/tm4c123gh6pm.h"
 
 void DelayWait10ms(uint32_t n);
 void PortF_Init(void);

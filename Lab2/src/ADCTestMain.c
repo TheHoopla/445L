@@ -159,10 +159,10 @@ int main(void){
   while(1){
     PF1 ^= 0x02;  // toggles when running in main
 		if(count == 1000){
-			//DisableInterrupts();
+			DisableInterrupts();
 			PlotPMF();
 			count++;
-			//break;
+			break;
 		}
 		}
 }

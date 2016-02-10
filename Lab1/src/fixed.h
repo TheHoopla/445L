@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "ST7735.h"
 #include "PLL.h"
-#include "../inc/tm4c123gh6pm.h"
+#include "../../inc/tm4c123gh6pm.h"
 
 void Test1(void);
 void Test2(void);
