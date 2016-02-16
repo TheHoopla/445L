@@ -9,6 +9,7 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./tm4c123gh6pm_startup_ccs.obj" \
+"./src/PLL.obj" \
 "./src/main.obj" \
 "./src/speaker.obj" \
 "./src/switch.obj" \
@@ -140,7 +141,7 @@ all: Lab3.out
 Lab3.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"Lab3.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Lab3_linkInfo.xml" --rom_model -o "Lab3.out" $(ORDERED_OBJS)
+	"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --c99 --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"Lab3.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Lab3_linkInfo.xml" --rom_model -o "Lab3.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -153,8 +154,8 @@ Lab3.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "tm4c123gh6pm_startup_ccs.obj" "src/main.obj" "src/speaker.obj" "src/switch.obj" "src/timer.obj" 
-	-$(RM) "tm4c123gh6pm_startup_ccs.pp" "src/main.pp" "src/speaker.pp" "src/switch.pp" "src/timer.pp" 
+	-$(RM) "tm4c123gh6pm_startup_ccs.obj" "src/PLL.obj" "src/main.obj" "src/speaker.obj" "src/switch.obj" "src/timer.obj" 
+	-$(RM) "tm4c123gh6pm_startup_ccs.pp" "src/PLL.pp" "src/main.pp" "src/speaker.pp" "src/switch.pp" "src/timer.pp" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
