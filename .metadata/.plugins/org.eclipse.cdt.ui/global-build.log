@@ -1255,3 +1255,75 @@ Finished building target: Lab2.out
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Lab3 ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/bin/armcl" -mv4 --code_state=32 --abi=ti_arm9_abi --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include" -g --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 1: error #171: expected a declaration
+"../main.c", line 1: error #10: "#" not expected here
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdarg.h", line 57: warning #12-D: parsing restarts here after previous syntax error
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h", line 256: error #20: identifier "va_list" is undefined
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h", line 258: error #20: identifier "va_list" is undefined
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h", line 260: error #20: identifier "va_list" is undefined
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h", line 262: error #20: identifier "va_list" is undefined
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h", line 265: error #20: identifier "va_list" is undefined
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h", line 268: error #20: identifier "va_list" is undefined
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h", line 270: error #20: identifier "va_list" is undefined
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/yvals.h", line 502: error #20: identifier "va_list" is undefined
+"../main.c", line 18: warning #69-D: integer conversion resulted in a change of sign
+
+"../main.c", line 38: warning #128-D: expected a statement
+>> Compilation failure
+"../main.c", line 55: warning #128-D: expected a statement
+"../main.c", line 88: warning #128-D: expected a statement
+"../main.c", line 113: warning #128-D: expected a statement
+10 errors detected in the compilation of "../main.c".
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab3 ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/bin/armcl" -mv4 --code_state=32 --abi=ti_arm9_abi --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include" -g --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 18: warning #69-D: integer conversion resulted in a change of sign
+"../main.c", line 38: warning #128-D: expected a statement
+"../main.c", line 55: warning #128-D: expected a statement
+"../main.c", line 88: warning #128-D: expected a statement
+"../main.c", line 113: warning #128-D: expected a statement
+Finished building: ../main.c
+ 
+Building target: Lab3.out
+Invoking: ARM Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/bin/armcl" -mv4 --code_state=32 --abi=ti_arm9_abi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"Lab3.map" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Lab3_linkInfo.xml" --rom_model -o "Lab3.out" "./main.obj" "./speaker.obj" "./switch.obj" "./timer.obj"  -l"libc.a" 
+<Linking>
+warning #10247-D: creating output section ".text" without a SECTIONS specification
+warning #10247-D: creating output section ".const" without a SECTIONS specification
+warning #10247-D: creating output section ".bss" without a SECTIONS specification
+warning #10247-D: creating output section ".cinit" without a SECTIONS specification
+warning #10210-D: creating ".stack" section with default size of 0x800; use the -stack option to change the default size
+Finished building target: Lab3.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab1 ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
