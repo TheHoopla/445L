@@ -5,7 +5,7 @@
 #include "switch.h"
 #include "timer.h"
 #include "speaker.h"
-#include "../Lab1/src/ST7735.c"
+#include "../../Lab1/src/ST7735.c"
 
 //buttonPressed Values
 //-1 = waiting
@@ -15,7 +15,7 @@
 //3 = hour increment
 //4 = minute increment
 
-uint32_t buttonPressed = -1;
+int32_t buttonPressed = -1;
 uint32_t timeHours = 0;
 uint32_t timeMinutes = 0;
 uint32_t alarmHours = 0;
@@ -35,6 +35,7 @@ void setTime(void){
 			          //update ST7735
 					  break;
 			default:
+					  break;
 		}
 		buttonPressed = pullCurrentButton();
 	}
@@ -52,6 +53,7 @@ void setAlarm(void){
 					  //update ST7735
 					  break;
 			default:
+					  break;
 		}
 		buttonPressed = pullCurrentButton();
 	}
@@ -85,6 +87,7 @@ void screenManager(uint32_t selection){
 					alarmToggle();
 					break;
 			default:
+					break;
 	}
 	buttonPressed = pullCurrentButton();
 }
@@ -110,6 +113,7 @@ int main(void) {
 				screenManager(selection);
 				break;
 		default:
+				break;
 		}
 		buttonPressed = pullCurrentButton();
 	}

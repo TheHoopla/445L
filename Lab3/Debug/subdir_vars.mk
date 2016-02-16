@@ -3,40 +3,25 @@
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../tm4c123gh6pm.cmd 
+
 C_SRCS += \
-../main.c \
-../speaker.c \
-../switch.c \
-../timer.c 
+../tm4c123gh6pm_startup_ccs.c 
 
 C_DEPS += \
-./main.pp \
-./speaker.pp \
-./switch.pp \
-./timer.pp 
+./tm4c123gh6pm_startup_ccs.pp 
 
 OBJS += \
-./main.obj \
-./speaker.obj \
-./switch.obj \
-./timer.obj 
+./tm4c123gh6pm_startup_ccs.obj 
 
 OBJS__QUOTED += \
-"main.obj" \
-"speaker.obj" \
-"switch.obj" \
-"timer.obj" 
+"tm4c123gh6pm_startup_ccs.obj" 
 
 C_DEPS__QUOTED += \
-"main.pp" \
-"speaker.pp" \
-"switch.pp" \
-"timer.pp" 
+"tm4c123gh6pm_startup_ccs.pp" 
 
 C_SRCS__QUOTED += \
-"../main.c" \
-"../speaker.c" \
-"../switch.c" \
-"../timer.c" 
+"../tm4c123gh6pm_startup_ccs.c" 
 
 
